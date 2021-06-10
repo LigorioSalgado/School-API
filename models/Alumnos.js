@@ -24,6 +24,26 @@ class Alumno{
         return alumno
     }
 
+    async getAlumnoByID(id){
+        // Trae el alumno por su ID
+        const alumno = this.db.get('alumnos').value().find(student => student.id === parseInt(id)); // ID viene en string y necesitamos convertir en entero
+        return alumno;
+    }
+
+    async updateAlumno(id,alumno){
+        // modifica un alumno por id
+        const alumnoIndex = this.db.get('alumnos').value().findIndex(student => student.id === parseInt(id));
+        if(alumnoIndex === -1) return null
+        this.db.get('alumnos').splice(alumnoIndex,1,{...alumno}).write()
+        return alumno
+    }
+
+    async deleteAlumno(id){
+        const alumnoIndex = this.db.get('alumnos').value().findIndex(student => student.id === parseInt(id));
+        if(alumnoIndex === -1) return null
+        this.db.get('alumnos').splice(alumnoIndex,1).write()
+        return true
+    }
 
 }
 
