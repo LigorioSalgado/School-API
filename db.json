@@ -1,5 +1,13 @@
 {
-    "alumnos": [],
-    "maestros": [],
-    "materias": []
+  "alumnos": [
+    {
+      "nombre": "Edwin",
+      "apellidos": "Salgado",
+      "edad": 24,
+      "correo": "edwin@devf.mx",
+      "id": 2
+    }
+  ],
+  "maestros": [],
+  "materias": []
 }
