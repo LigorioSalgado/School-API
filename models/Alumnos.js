@@ -24,6 +24,20 @@ class Alumno{
         return alumno
     }
 
+    async updateAlumno(id,alumno){
+        // modifica un alumno por id
+        const alumnoIndex = this.db.get('alumnos').value().findIndex(student => student.id === parseInt(id));
+        if(alumnoIndex === -1) return null
+        this.db.get('alumnos').splice(alumnoIndex,1,{...alumno}).write()
+        return alumno
+    }
+
+    async deleteAlumno(id){
+        const alumnoIndex = this.db.get('alumnos').value().findIndex(student => student.id === parseInt(id));
+        if(alumnoIndex === -1) return null
+        this.db.get('alumnos').splice(alumnoIndex,1).write()
+        return true
+    }
 
 }
 

@@ -1,11 +1,11 @@
 {
   "alumnos": [
     {
-      "nombre": "Edwin",
-      "apellidos": "Salgado",
-      "edad": 24,
-      "correo": "edwin@devf.mx",
-      "id": 2
+      "id": 900,
+      "nombre": "Waldo",
+      "apellidos": "Mendoza",
+      "edad": 21,
+      "correo": "wsmendoza@outlook.com"
     }
   ],
   "maestros": [],
